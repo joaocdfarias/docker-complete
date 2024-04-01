@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 80
 
 # Runs command on CLI
-CMD [ "node", "server.js" ]
+CMD [ "npm", "start" ]
