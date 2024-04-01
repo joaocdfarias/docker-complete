@@ -16,8 +16,5 @@ COPY . .
 # Exposes the container to port 80
 EXPOSE 80
 
-# Sets a volume for persisting data
-VOLUME [ "/app/feedback" ]
-
 # Runs command on CLI
 CMD [ "node", "server.js" ]
