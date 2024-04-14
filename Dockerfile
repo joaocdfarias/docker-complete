@@ -13,12 +13,14 @@ RUN npm install
 # Copies everything from local dir to workdir
 COPY . .
 
+# Defines an argument
+ARG DEFAULT_PORT=80
+
 # Sets an environment variable
-# Since we are setting in the .env file, this will be commented
-# ENV PORT 80
+ENV PORT $DEFAULT_PORT
 
 # Exposes the container to port 80 (we need to add a dollar sign before a variable)
-# EXPOSE $PORT
+EXPOSE $PORT
 
 # Runs command on CLI
 CMD [ "npm", "start" ]
